@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoyalCab - Kontakt</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Niconne&display=swap" rel="stylesheet">
+    <link rel="icon" href="./images/black/RoyalCab-logo1.png" type="image/x-icon">
+
+</head>
+<body>
+
+    <header>
+        <a href="index.html">
+        <img src="./images/logos/logo-white.png" alt="RoyalCab Logo" class="logo-faq-image">
+        </a>
+    </header>
+
+    <main>
+        <section class="contact-hero">
+            <h1>Skontaktuj sie z nami</h1>
+            <p>Jesteśmy do Twojej dyspozycji 24/7</p>
+        </section>
+
+        <div class="subpage-container">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2>Dane kontaktowe</h2>
+                    
+                    <div class="contact-method">
+                        <img src="./images/icons/phone.png" alt="Telefon">
+                        <div class="contact-details">
+                            <h3>Telefon</h3>
+                            <p><a href="tel:+48123456789">+48 123 456 789</a></p>
+                            <p>Całodobowa infolinia</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <img src="./images/icons/email.png" alt="Email">
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p><a href="mailto:kontakt@royalcab.pl">kontakt@royalcab.pl</a></p>
+                            <p>Odpowiadamy w ciągu 24h</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <img src="./images/icons/location.png" alt="Adres">
+                        <div class="contact-details">
+                            <h3>Biuro</h3>
+                            <p>ul. Taxiowa 123</p>
+                            <p>00-001 Warszawa</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <img src="./images/icons/clock.png" alt="Godziny otwarcia">
+                        <div class="contact-details">
+                            <h3>Godziny otwarcia biura</h3>
+                            <p>Pon-Pt: 8:00-20:00</p>
+                            <p>Sob: 9:00-15:00</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h2>Formularz kontaktowy</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Imię i nazwisko*</label>
+                            <input type="text" id="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email*</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Telefon</label>
+                            <input type="tel" id="phone">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Temat*</label>
+                            <select id="subject" required>
+                                <option value="">Wybierz temat</option>
+                                <option value="general">Zapytanie ogólne</option>
+                                <option value="complaint">Reklamacja</option>
+                                <option value="cooperation">Współpraca</option>
+                                <option value="career">Kariera</option>
+                                <option value="other">Inne</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Wiadomość*</label>
+                            <textarea id="message" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">Wyślij wiadomość</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="contact-map">
+                <h2 class="subpage-title">Gdzie się znajdujemy</h2>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2443.6000000000004!2d21.01753431579689!3d52.22967597976114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x471ecc669a869f01%3A0x72f0be2a88ead3fc!2sPa%C5%82ac%20Kultury%20i%20Nauki!5e0!3m2!1sen!2spl!4v1620000000000!5m2!1sen!2spl" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+            
+            <div class="business-hours">
+                <h2 class="subpage-title">Godziny dostępności</h2>
+                <table class="hours-table">
+                    <tr>
+                        <th>Dzień</th>
+                        <th>Godziny</th>
+                    </tr>
+                    <tr>
+                        <td>Poniedziałek - Piątek</td>
+                        <td>06:00 - 21:00</td>
+                    </tr>
+                    <tr>
+                        <td>Sobota</td>
+                        <td>07:00 - 21:00</td>
+                    </tr>
+                    <tr>
+                        <td>Niedziela</td>
+                        <td>09:00 - 20:00</td>
+                    </tr>
+                    <tr>
+                        <td>Święta</td>
+                        <td>09:00 - 20:00</td>
+                    </tr>
+                </table>
+                <p style="margin-top: 20px; color: #afafaf; font-style: italic;">* Usługi taxi dostępne całodobowo, biuro obsługi klienta czynne w godzinach podanych powyżej.</p>
+            </div>
+            
+            <a href="index.html" class="back-btn-on">Powrót do strony głównej</a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="oferta.html">Oferta</a>
+                <a href="onas.html">O Nas</a>
+                <a href="kontakt.html">Kontakt</a>
+                <a href="faq.html">FAQ</a>
+                <a href="regulamin.html">Regulamin</a>
+                <a href="polityka-prywatnosci.html">Polityka prywatności</a>
+            </div>
+            
+            <div class="footer-contact">
+                <p>Email: kontakt@royalcab.pl</p>
+                <p>Telefon: +48 123 456 789</p>
+            </div>
+            
+            <div class="footer-copyright">
+                <p>&copy; 2025 RoyalCab. Wszelkie prawa zastrzeżone.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

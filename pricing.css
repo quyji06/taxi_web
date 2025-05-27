@@ -1,0 +1,184 @@
+.main-nav {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pricing-btn,
+.back-btn {
+    display: flex;
+    max-width: 100px;
+    text-align: center;
+    padding: 10px 25px;
+    background-color: #afafaf;
+    color: #000;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: all 0.3s;
+    margin: 0 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pricing-btn:hover,
+.back-btn:hover {
+    background-color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.pricing-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/offer-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 100px 20px;
+    text-align: center;
+    color: white;
+    margin-bottom: 50px;
+}
+
+.pricing-hero h1 {
+    font-family: "Niconne", cursive;
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.pricing-hero p {
+    font-size: 1.2rem;
+    color: #afafaf;
+}
+
+.pricing-tables {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.pricing-table {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.pricing-table:hover {
+    transform: translateY(-10px);
+}
+
+.pricing-title {
+    font-family: "Niconne", cursive;
+    font-size: 2rem;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.price {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.price-small {
+    font-size: 1rem;
+    color: #afafaf;
+}
+
+.pricing-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px 0;
+}
+
+.pricing-features li {
+    color: #afafaf;
+    padding: 10px 0;
+    border-bottom: 1px solid #333;
+}
+
+.pricing-features li:last-child {
+    border-bottom: none;
+}
+
+.pricing-table.premium {
+    border: 2px solid #afafaf;
+}
+
+.pricing-table.vip {
+    border: 2px solid #FFD700;
+}
+
+.pricing-table.vip .pricing-title {
+    color: #FFD700;
+}
+
+.pricing-info {
+    max-width: 1200px;
+    margin: 50px auto;
+    padding: 0 20px;
+    text-align: center;
+    color: #afafaf;
+    font-size: 0.9rem;
+}
+
+.pricing-table.business {
+    border: 2px solid #4c77af;
+}
+
+.pricing-table.business .pricing-title {
+    color: #4c77af;
+}
+
+.pricing-table.family {
+    border: 2px solid #9521f3;
+}
+
+.pricing-table.family .pricing-title {
+    color: #9521f3;
+}
+
+.pricing-table.premium {
+    border: 2px solid #afafaf;
+}
+
+.pricing-table.premium .pricing-title {
+    color: #afafaf;
+}
+
+.pricing-table.vip {
+    border: 2px solid #FFD700;
+}
+
+.pricing-table.vip .pricing-title {
+    color: #FFD700;
+}
+
+@media (max-width: 1200px) {
+    .pricing-tables {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .pricing-hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .pricing-tables {
+        grid-template-columns: 1fr;
+    }
+
+    .main-nav {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .pricing-btn,
+    .back-btn {
+        margin: 10px;
+    }
+}

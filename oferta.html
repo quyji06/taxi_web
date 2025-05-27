@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RoyalCab - Oferta</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Niconne&display=swap" rel="stylesheet">
+    <link rel="icon" href="./images/black/RoyalCab-logo1.png" type="image/x-icon">
+    <link rel="stylesheet" href="pricing.css">
+
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html">
+            <img src="./images/logos/logo-white.png" alt="RoyalCab Logo" class="logo-faq-image">
+        </a>
+        <nav class="main-nav">
+
+        </nav>
+    </header>
+    <a href="cennik.html" class="pricing-btn">Cennik</a>
+
+    <main>
+        <section class="offer-hero">
+            <h1>Nasza Oferta</h1>
+            <p>Znajdź idealnego kierowcę w Twojej okolicy</p>
+        </section>
+
+        <div class="subpage-container">
+            <div class="search-container">
+                <form id="offerForm" class="search-form">
+                    <div class="form-group">
+                        <label for="voivodeship">Województwo</label>
+                        <select id="voivodeship" required>
+                            <option value="">Wybierz województwo</option>
+                            <option value="dolnoslaskie">Dolnośląskie</option>
+                            <option value="kujawsko-pomorskie">Kujawsko-Pomorskie</option>
+                            <option value="lubelskie">Lubelskie</option>
+                            <option value="lubuskie">Lubuskie</option>
+                            <option value="lodzkie">Łódzkie</option>
+                            <option value="malopolskie">Małopolskie</option>
+                            <option value="mazowieckie">Mazowieckie</option>
+                            <option value="opolskie">Opolskie</option>
+                            <option value="podkarpackie">Podkarpackie</option>
+                            <option value="podlaskie">Podlaskie</option>
+                            <option value="pomorskie">Pomorskie</option>
+                            <option value="slaskie">Śląskie</option>
+                            <option value="swietokrzyskie">Świętokrzyskie</option>
+                            <option value="warminsko-mazurskie">Warmińsko-Mazurskie</option>
+                            <option value="wielkopolskie">Wielkopolskie</option>
+                            <option value="zachodniopomorskie">Zachodniopomorskie</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="city">Miasto/Gmina</label>
+                        <select id="city" required disabled>
+                            <option value="">Najpierw wybierz województwo</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="carModel">Model samochodu</label>
+                        <select id="carModel">
+                            <option value="">Dowolny model</option>
+                            <option value="skoda_octavia">Skoda Octavia</option>
+                            <option value="toyota_corolla">Toyota Corolla</option>
+                            <option value="audi_a6">Audi A6</option>
+                            <option value="bmw_5">BMW Seria 5</option>
+                            <option value="mercedes_e">Mercedes Klasy E</option>
+                            <option value="tesla_model3">Tesla Model 3</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="serviceType">Rodzaj usługi</label>
+                        <select id="serviceType">
+                            <option value="">Dowolna usługa</option>
+                            <option value="standard">Standard</option>
+                            <option value="premium">Premium</option>
+                            <option value="vip">VIP</option>
+                            <option value="business">Business</option>
+                            <option value="family">Family</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="search-btn">Szukaj kierowców</button>
+                </form>
+            </div>
+
+            <div class="results-container">
+                <h2 class="subpage-title">Dostępni kierowcy</h2>
+                <p id="resultsCount" style="text-align: center; color: #afafaf;">Wybierz kryteria wyszukiwania aby
+                    zobaczyć dostępnych kierowców</p>
+
+                <div class="results-grid" id="driversResults"></div>
+            </div>
+
+            <div class="admin-panel" id="adminPanel">
+                <h2>Panel Administracyjny</h2>
+                <form id="driverForm" class="admin-form">
+                    <div class="form-row">
+                        <div>
+                            <label for="driverFirstName">Imię kierowcy*</label>
+                            <input type="text" id="driverFirstName" required>
+                        </div>
+                        <div>
+                            <label for="driverLastName">Nazwisko kierowcy*</label>
+                            <input type="text" id="driverLastName" required>
+                        </div>
+                        <div>
+                            <label for="driverAge">Wiek*</label>
+                            <input type="number" id="driverAge" required min="18" max="70">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div>
+                            <label for="driverVoivodeship">Województwo*</label>
+                            <select id="driverVoivodeship" required>
+                                <option value="">Wybierz województwo</option>
+                                <option value="dolnoslaskie">Dolnośląskie</option>
+                                <option value="kujawsko-pomorskie">Kujawsko-Pomorskie</option>
+                                <option value="lubelskie">Lubelskie</option>
+                                <option value="lubuskie">Lubuskie</option>
+                                <option value="lodzkie">Łódzkie</option>
+                                <option value="malopolskie">Małopolskie</option>
+                                <option value="mazowieckie">Mazowieckie</option>
+                                <option value="opolskie">Opolskie</option>
+                                <option value="podkarpackie">Podkarpackie</option>
+                                <option value="podlaskie">Podlaskie</option>
+                                <option value="pomorskie">Pomorskie</option>
+                                <option value="slaskie">Śląskie</option>
+                                <option value="swietokrzyskie">Świętokrzyskie</option>
+                                <option value="warminsko-mazurskie">Warmińsko-Mazurskie</option>
+                                <option value="wielkopolskie">Wielkopolskie</option>
+                                <option value="zachodniopomorskie">Zachodniopomorskie</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="driverCity">Miasto/Gmina*</label>
+                            <select id="driverCity" required disabled>
+                                <option value="">Najpierw wybierz województwo</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="driverAvailable">Dostępność*</label>
+                            <select id="driverAvailable" required>
+                                <option value="true">Dostępny</option>
+                                <option value="false">Niedostępny</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div>
+                            <label for="driverCarModel">Model samochodu*</label>
+                            <select id="driverCarModel" required>
+                                <option value="skoda_octavia">Skoda Octavia</option>
+                                <option value="toyota_corolla">Toyota Corolla</option>
+                                <option value="audi_a6">Audi A6</option>
+                                <option value="bmw_5">BMW Seria 5</option>
+                                <option value="mercedes_e">Mercedes Klasy E</option>
+                                <option value="tesla_model3">Tesla Model 3</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="driverServiceType">Typ usługi*</label>
+                            <select id="driverServiceType" required>
+                                <option value="standard">Standard</option>
+                                <option value="premium">Premium</option>
+                                <option value="vip">VIP</option>
+                                <option value="business">Business</option>
+                                <option value="family">Family</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div>
+                            <label for="driverPhoto">Zdjęcie kierowcy (URL)*</label>
+                            <input type="text" id="driverPhoto" required>
+                        </div>
+                        <div>
+                            <label for="driverExperience">Doświadczenie (lata)*</label>
+                            <input type="number" id="driverExperience" required min="0" max="50">
+                        </div>
+                        <div>
+                            <label for="driverRating">Ocena (1-5)*</label>
+                            <input type="number" id="driverRating" required min="1" max="5" step="0.1">
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div style="grid-column: 1 / -1">
+                            <label for="driverBio">Opis kierowcy</label>
+                            <textarea id="driverBio"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="reset">Wyczyść</button>
+                        <button type="submit">Dodaj kierowcę</button>
+                    </div>
+                </form>
+            </div>
+
+            <a href="index.html" class="back-btn-on">Powrót do strony głównej</a>
+            <a href="#" class="back-btn-on" id="adminToggle" style="margin-top: 20px; background-color: #333;">Panel
+                Administracyjny</a>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="oferta.html">Oferta</a>
+                <a href="onas.html">O Nas</a>
+                <a href="kontakt.html">Kontakt</a>
+                <a href="faq.html">FAQ</a>
+                <a href="regulamin.html">Regulamin</a>
+                <a href="polityka-prywatnosci.html">Polityka prywatności</a>
+            </div>
+
+            <div class="footer-contact">
+                <p>Email: kontakt@royalcab.pl</p>
+                <p>Telefon: +48 123 456 789</p>
+            </div>
+
+            <div class="footer-copyright">
+                <p>&copy; 2025 RoyalCab. Wszelkie prawa zastrzeżone.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="offer.js"></script>
+</body>
+
+</html>
